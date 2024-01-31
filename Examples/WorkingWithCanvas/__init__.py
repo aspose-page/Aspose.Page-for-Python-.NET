@@ -1,0 +1,4 @@
+import WorkingWithCanvas.clipping_ps
+import WorkingWithCanvas.clipping_xps
+import WorkingWithCanvas.transformations_ps
+import WorkingWithCanvas.transformations_xps

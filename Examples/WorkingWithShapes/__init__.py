@@ -1,0 +1,5 @@
+import WorkingWithShapes.add_ellipse_ps
+import WorkingWithShapes.add_ellipse_xps
+import WorkingWithShapes.add_rectangle_ps
+import WorkingWithShapes.add_rectangle_xps
+import WorkingWithShapes.apply_different_color_spaces_xps

@@ -1,0 +1,3 @@
+import WorkingWithImages.add_image_ps
+import WorkingWithImages.add_image_xps
+import WorkingWithImages.add_tiled_image_xps

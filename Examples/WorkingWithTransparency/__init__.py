@@ -1,0 +1,4 @@
+import WorkingWithTransparency.add_transparent_image_ps
+import WorkingWithTransparency.add_transparent_object_xps
+import WorkingWithTransparency.set_opacity_mask_xps
+import WorkingWithTransparency.show_pseudo_transparency_ps

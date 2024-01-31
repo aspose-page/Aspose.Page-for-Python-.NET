@@ -1,0 +1,3 @@
+import WorkingWithCrossPackageOperations.add_glyph_clone_and_change_color
+import WorkingWithCrossPackageOperations.add_image_filled_glyph_and_foreign_image
+import WorkingWithCrossPackageOperations.manipulate_pages

@@ -1,0 +1,7 @@
+import WorkingWithDocumentConversion.post_script_to_image
+import WorkingWithDocumentConversion.post_script_to_pdf
+import WorkingWithDocumentConversion.xps_to_bmp
+import WorkingWithDocumentConversion.xps_to_jpeg
+import WorkingWithDocumentConversion.xps_to_pdf
+import WorkingWithDocumentConversion.xps_to_png
+import WorkingWithDocumentConversion.xps_to_tiff

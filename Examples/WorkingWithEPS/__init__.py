@@ -1,0 +1,2 @@
+import WorkingWithEPS.crop_eps
+import WorkingWithEPS.resize_eps
