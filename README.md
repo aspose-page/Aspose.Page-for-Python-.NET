@@ -1,10 +1,10 @@
-# XPS & Postscript File Manipulation API
+# XPS & Postscript File Manipulation Python API
 
-[Aspose.Page for Python via .NET](https://products.aspose.com/page/python-net) is an on premise .NET API that allows you to add XPS manipulation features to your own applications. The API also supports to convert XPS, EPS & PS documents to other formats.
+[Aspose.Page for Python via .NET](https://products.aspose.com/page/python-net) is an on premise Python API that allows you to add XPS manipulation features to your own applications. The API also supports to convert XPS, EPS & PS documents to other formats.
 
 <p align="center">
 
-  <a title="Download complete Aspose.Page for Python via .NET source code" href="https://github.com/aspose-page/Aspose.Page-for-Python-.NET/archive/master.zip">
+  <a title="Download complete Aspose.Page for Python source code" href="https://github.com/aspose-page/Aspose.Page-for-Python-.NET/archive/master.zip">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
@@ -45,7 +45,7 @@ Directory | Description
 
 ## Platform Independence
 
-Aspose.Page for .NET can be integrated with 32-bit and 64-bit Python web or console applications fro Windows where Python 3.6 or later is installed. Packages for Linux and MacOS will be released in the nearest future.
+Aspose.Page for Python can be integrated with 32-bit and 64-bit Python web or console applications fro Windows where Python 3.6 or later is installed. Packages for Linux and MacOS will be released in the nearest future.
 
 ## Get Started with Aspose.Page for Python
 
