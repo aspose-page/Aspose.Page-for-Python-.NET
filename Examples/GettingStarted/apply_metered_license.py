@@ -19,14 +19,10 @@ class ApplyMeteredLicense:
         data_dir = Util.get_data_dir_getting_started()
         #Create file stream for EPS file
         ps_stream = open(data_dir + "input.eps", "rb")
-        #Create an instance of PostScript document from stream
-        document = PsDocument(ps_stream)
-        #Create Image device for converting EPS file to PNG image
-        device = ImageDevice()
-        #Save EPS file as image
-        document.save(device, ImageSaveOptions())
-        #Get images bytes. One bytes array for one page. In our case we have one page.
-        images_bytes = device.images_bytes
+        #Create an instance of PostScript document from PS/EPS file
+        document = PsDocument(data_dir + "input.eps")
+        #Save EPS file as images bytes. One bytes array for one page. In our case we have one page.
+        images_bytes = document.save_as_image(ImageSaveOptions())
         #Save image bytes to file
         with open(data_dir + "eps_out.png", "wb") as fos:
             fos.write(images_bytes[0][0:0+len(images_bytes[0])])

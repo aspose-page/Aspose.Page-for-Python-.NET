@@ -16,7 +16,7 @@ class CreateDocumentPS:
             options = PsSaveOptions()
             #If you want to aassign page size other than A4, set page size in options
             options.page_size = PageConstants.get_size(PageConstants.SIZE_A4, PageConstants.ORIENTATION_PORTRAIT)
-            #If you want to aassign page margins other empty, set page margins in options
+            #If you want to assign page margins other empty, set page margins in options
             options.margins = PageConstants.get_margins(PageConstants.MARGINS_ZERO)
             #If you plan to use fonts that located in non system folders, set additional fonts folders in options
             options.additional_fonts_folders = [ dir ]

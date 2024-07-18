@@ -73,10 +73,8 @@ import aspose.pydrawing *
 
 #Create save options
 options = PsSaveOptions()
-#Create output stream for PS document
-out_ps_stream = open(dir + "document.ps", "wb")
-#Create PS document
-document = PsDocument(out_ps_stream, options, false)
+#Create PS document from PostScript file
+document = PsDocument(dir + "document.ps", options, false)
 #Create aspose.pydrawing.Font
 font = aspose.page.ExternalFontCache.create_font_by_family_name("Times New Roman", font_size, aspose.pydrawing.FontStyle.BOLD)
 # Add text fragment to new page at point (50, 150)
@@ -122,11 +120,9 @@ x_docs.save(dir + "output.xps")
 
 Below code snippet follows these steps:
 
-1. Create EPS file input stream.
-1. Initialize `PsDocument` object.
-1. Create `ImageSaveOptions` object.
-1. Initialize `ImageDevice` object with JPEG `aspose.pydrawing.imaging.ImageFormat`.
-1. Save the document.
+1. Initialize `PsDocument` object from EPS file.
+1. Create `ImageSaveOptions` object with JPEG `aspose.pydrawing.imaging.ImageFormat`.
+1. Save the document as images bytes.
 
 ```python
 import os
@@ -135,19 +131,17 @@ from aspose.page.eps import *
 from aspose.page.eps.device import *
 import aspose.pydrawing.imaging *
 
-#Initialize EPS input stream
-eps_stream = open(data_dir + "input.eps", "rb")
-#Create PsDocument
-document = PsDocument(ps_stream)
+#Create PsDocument from Postscript file
+document = PsDocument(data_dir + "input.eps")
 #If you want to convert Postscript file despite of minor errors set this flag
 suppress_errors = True
 #Initialize options object with necessary parameters.
 options = ImageSaveOptions(suppress_errors)
 #Default image format is PNG and it is not mandatory to set it in ImageDevice
 #Default image size is 595x842 and it is not mandatory to set it in ImageDevice
-device = ImageDevice(aspose.pydrawing.imaging.ImageFormat.jpeg)
-#Save document to JPEG image
-document.save(device, options)
+#options = ImageSaveOptions(aspose.pydrawing.imaging.ImageFormat.jpeg, new Size(595x842), suppress_errors)
+#Save document to JPEG images bytes arrays. One bytes array for one page of the input file.
+imagesBytes = document.save_as_image(options)
 ```
 
 ### Example of converting XPS to PDF
@@ -167,24 +161,16 @@ Below code snippet follows these steps:
 from aspose.page.xps import *
 from aspose.page.xps.presentation.pdf import *
 
-#Initialize PDF output stream
-pdf_stream = open(data_dir + "XPStoPDF_out.pdf", "wb")
-#Initialize XPS input stream
-xps_stream = open(data_dir + "input.xps", "rb")
-#Load XPS document form the stream
-document = XpsDocument(xps_stream, XpsLoadOptions())
-#or load XPS document directly from file. No xpsStream is needed then.
-#XpsDocument document = new XpsDocument(inputFileName, new XpsLoadOptions());
+#Initialize XpsDocument instance with XPS file
+document = XpsDocument(data_dir + "input.xps", XpsLoadOptions())
 #Initialize options object with necessary parameters.
-options = PdfSaveOptions()                
+options = PdfSaveOptions()
 options.jpeg_quality_level = 100
 options.image_compression = PdfImageCompression.JPEG
 options.text_compression = PdfTextCompression.FLATE
 options.page_numbers = [ 1, 2, 6 ]
-#Create rendering device for PDF format
-device = PdfDevice(pdf_stream)
-#Save XPS document as PDF
-document.save(device, options)
+#Save XPS document as PDF file
+document.save_as_pdf(data_dir + "XPStoPDF_out.pdf", options)
 ```
 
 ### Merge XPS Files
@@ -201,18 +187,12 @@ Below code snippet follows these steps:
 ```python
 from aspose.page.xps import *
 
-#Initialize XPS output stream
-out_stream = data_dir + "mergedXPSfiles.xps", "wb")
-#Initialize XPS input stream
-out_stream = open(data_dir + "input.xps", "rb")
-#Load XPS document from the stream
-document = XpsDocument(in_stream, XpsLoadOptions())
-#or load XPS document directly from file. No xpsStream is needed then.
-#XpsDocument document = new XpsDocument(inputFileName, new XpsLoadOptions());
+#Load XPS document from the firct XPS file
+document = XpsDocument(data_dir + "input.xps", XpsLoadOptions())
 #Create an array of XPS files that will be merged with the first one
 files_to_merge = [ data_dir + "Demo.xps", data_dir + "sample.xps" ]
-# Merge XPS files to output PDF document
-document.merge(files_to_merge, out_stream)
+# Merge XPS files to output XPS document
+document.merge(files_to_merge, data_dir + "mergedXPSfiles.xps")
 ```
 
 ### Crop EPS image
@@ -229,10 +209,8 @@ Below code snippet follows these steps:
 ```python
 from aspose.page.eps import *
 
-#Create an input stream for EPS file
-input_eps_stream = open(data_dir + "input.eps", "rb")
-#Initialize PsDocument object with input stream
-doc = PsDocument(input_eps_stream)
+#Initialize PsDocument object with EPS file
+doc = PsDocument(data_dir + "input.eps")
 #If someone whants to know initial bounding box, get initial bounding box of EPS image
 #initial_bounding_box = doc.extract_eps_bounding_box()
 #Create an output stream for resized EPS

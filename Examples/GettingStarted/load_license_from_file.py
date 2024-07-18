@@ -11,6 +11,6 @@ class LoadLicenseFromFile:
         # Initialize license object
         license = License()
         # Set license
-        license.set_license("D:\\Aspose.Page.Product.Family.lic")
+        license.set_license("D:\\Aspose.Page.Python.via.NET.lic")
         print("License set successfully.")
         # ExEnd:1

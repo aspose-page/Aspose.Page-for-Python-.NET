@@ -16,7 +16,7 @@ class AddTransparentImagePS:
             #Create save options with A4 size
             options = PsSaveOptions()
             #Set page's background color to see white image on it's own transparent background
-            options.background_color = aspose.pydrawing.Color.from_argb(211, 8, 48)
+            options.background_color = aspose.page.drawing.Color.from_argb(211, 8, 48)
             
             # Create new 1-paged PS Document
             document = PsDocument(out_ps_stream, options, False)

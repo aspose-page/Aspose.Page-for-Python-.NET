@@ -3,6 +3,8 @@ Temp/
 obj/
 classes/
 generated/
+*/__pycache__
+*/__pycache__/*
 *.suo
 bin/
 * Out*

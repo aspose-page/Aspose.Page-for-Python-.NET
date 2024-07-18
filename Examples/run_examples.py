@@ -42,7 +42,7 @@ from WorkingWithDocumentConversion.xps_to_jpeg import *
 from WorkingWithDocumentConversion.xps_to_pdf import *
 from WorkingWithDocumentConversion.xps_to_png import *
 from WorkingWithDocumentConversion.xps_to_tiff import *
-#from WorkingWithDocumentMerging.post_script_to_pdf import *
+from WorkingWithDocumentMerging.post_script_to_pdf import *
 from WorkingWithDocumentMerging.xps_to_pdf import *
 from WorkingWithDocumentMerging.xps_to_xps import *
 from WorkingWithPrintTickets.get_print_tickets import *
@@ -117,9 +117,9 @@ def main():
     # WorkingWithDocumentMerging
     # =====================================================
     # =====================================================
-    PostScriptToPdf.run();
-    XPStoPDF.run();
-    XPStoXPS.run();
+    MergePostScriptToPdf.run();
+    MergeXPStoPDF.run();
+    MergeXPStoXPS.run();
 
     # =====================================================
     # =====================================================

@@ -55,7 +55,7 @@ class AddTextureTilingPatternPS:
             document.write_graphics_restore()
             
             #Fill text with texture pattern                
-            font = aspose.page.ExternalFontCache.fetch_dr_font("Arial", 96, aspose.pydrawing.FontStyle.BOLD)
+            font = aspose.page.ExternalFontCache.create_font_by_family_name("Arial", 96, aspose.pydrawing.FontStyle.BOLD)
             pen2 = aspose.pydrawing.Pen(aspose.pydrawing.Color.black)
             pen2.width = float(2)
             document.fill_and_stroke_text("ABC", font, 200, 300, paint, pen2)
