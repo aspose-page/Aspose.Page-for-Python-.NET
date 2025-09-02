@@ -17,8 +17,8 @@ class SetOpacityMaskXPS:
         # Rectangle with opacity masked by ImageBrush
         path = canvas.add_path(doc.create_path_geometry("M 10,180 L 228,180 228,285 10,285"))
         path.fill = doc.create_solid_color_brush(doc.create_color(1.0, 0.0, 0.0))
-        imageBrush: XpsImageBrush = doc.create_image_brush(data_dir + "R08SY_NN.tif", aspose.pydrawing.RectangleF(0, 0, 128, 192),
-                aspose.pydrawing.RectangleF(0, 0, 64, 96))
+        imageBrush: XpsImageBrush = doc.create_image_brush(data_dir + "R08SY_NN.tif", aspose.pydrawing.RectangleF(0., 0., 128., 192.),
+                aspose.pydrawing.RectangleF(0., 0., 64., 96.))
         path.opacity_mask = imageBrush
         imageBrush.tile_mode = XpsTileMode.TILE
         # Save resultant XPS document

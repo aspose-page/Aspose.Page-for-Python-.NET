@@ -1,7 +1,6 @@
 from aspose.page.eps import *
 from aspose.page.eps.device import *
 import aspose.pydrawing
-import io
 from util import Util
 
 class AddTextureTilingPatternPS:
@@ -37,7 +36,7 @@ class AddTextureTilingPatternPS:
             
             #Create rectangle path
             path = aspose.pydrawing.drawing2d.GraphicsPath()
-            path.add_rectangle(aspose.pydrawing.RectangleF(0, 0, 200, 100))
+            path.add_rectangle(aspose.pydrawing.RectangleF(0.0, 0.0, 200.0, 100.0))
             
             #Fill rectangle
             document.fill(path)

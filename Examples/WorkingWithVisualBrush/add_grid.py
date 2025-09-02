@@ -15,8 +15,8 @@ class AddGrid:
         # Geometry for magenta grid VisualBrush
         path_geometry = doc.create_path_geometry()
         path_geometry.add_segment(doc.create_poly_line_segment(
-        [ aspose.pydrawing.PointF(240, 5), aspose.pydrawing.PointF(240, 310), aspose.pydrawing.PointF(0, 310) ], True))
-        path_geometry[0].start_point = aspose.pydrawing.PointF(0, 5)
+        [ aspose.pydrawing.PointF(240., 5.), aspose.pydrawing.PointF(240., 310.), aspose.pydrawing.PointF(0., 310.) ], True))
+        path_geometry[0].start_point = aspose.pydrawing.PointF(0., 5.)
         
         # Canvas for magenta grid VisualBrush
         visual_canvas = doc.create_canvas()
@@ -28,7 +28,7 @@ class AddGrid:
         grid_path = doc.create_path(path_geometry)
         #Create Visual Brush, it is specified by some XPS fragment (vector graphics and glyphs)
         visualBrush: XpsVisualBrush = doc.create_visual_brush(visual_canvas,
-            aspose.pydrawing.RectangleF(0, 0, 10, 10), aspose.pydrawing.RectangleF(0, 0, 10, 10))
+            aspose.pydrawing.RectangleF(0., 0., 10., 10.), aspose.pydrawing.RectangleF(0., 0., 10., 10.))
         grid_path.fill = visualBrush
         visualBrush.tile_mode = XpsTileMode.TILE
         # New canvas

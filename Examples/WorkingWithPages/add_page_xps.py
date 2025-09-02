@@ -1,6 +1,4 @@
 from aspose.page.xps import *
-from aspose.page.xps.xpsmodel import *
-import aspose.pydrawing
 from util import Util
 
 class AddPageXPS:

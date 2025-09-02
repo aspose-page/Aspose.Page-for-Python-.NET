@@ -26,17 +26,17 @@ class PostScriptToImage:
         # If you want to add special folder where fonts are stored. Default fonts folder in OS is always included.
         options.additional_fonts_folders = [ """{FONT_FOLDER}""" ]
 
-        # Save PS document as array of image bytes, one bytes array for one page.
-        images_bytes = document.save_as_image(options)
+        # Save PS document to images, one image for one page.
+        document.save_as_image(options, data_dir, "out_image")
 
         # Save images bytes arrays as image files.
 
-        i = 0
+        #i = 0
 
-        for image_bytes in images_bytes:
-            image_path = os.path.abspath(data_dir + "out_image" + str(i) + ".png")
-            with open(image_path, "wb") as fs:
-                fs.write(image_bytes[0:0+len(image_bytes)])
-            i += 1
+        #for image_bytes in images_bytes:
+        #   image_path = os.path.abspath(data_dir + "out_image" + str(i) + ".png")
+        #    with open(image_path, "wb") as fs:
+        #        fs.write(image_bytes[0:0+len(image_bytes)])
+        #    i += 1
         
         # ExEnd:1

@@ -2,7 +2,6 @@ from aspose.page import *
 from aspose.page.eps import *
 from aspose.page.eps.device import *
 import aspose.pydrawing
-import io
 from util import Util
 
 class AddRectanglePS:
@@ -22,7 +21,7 @@ class AddRectanglePS:
             
             #Create graphics path from the first rectangle
             path = aspose.pydrawing.drawing2d.GraphicsPath()
-            path.add_rectangle(aspose.pydrawing.RectangleF(250, 100, 150, 100))
+            path.add_rectangle(aspose.pydrawing.RectangleF(250., 100., 150., 100.))
             #Set paint
             document.set_paint(aspose.pydrawing.SolidBrush(aspose.pydrawing.Color.orange))
             #Fill the rectangle
@@ -30,7 +29,7 @@ class AddRectanglePS:
             
             #Create graphics path from the second rectangle
             path = aspose.pydrawing.drawing2d.GraphicsPath()
-            path.add_rectangle(aspose.pydrawing.RectangleF(250, 300, 150, 100))
+            path.add_rectangle(aspose.pydrawing.RectangleF(250., 300., 150., 100.))
             #Set stroke
             document.set_stroke(GraphicsFactory.create_pen_by_brush_and_width(aspose.pydrawing.SolidBrush(aspose.pydrawing.Color.red), 3))
             #Stroke (outline) the rectangle

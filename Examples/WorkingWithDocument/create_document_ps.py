@@ -1,6 +1,5 @@
 from aspose.page.eps import *
 from aspose.page.eps.device import *
-import io
 from util import Util
 
 class CreateDocumentPS:

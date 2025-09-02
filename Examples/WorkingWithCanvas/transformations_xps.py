@@ -57,7 +57,7 @@ class TransformationsXPS:
         # Translate this canvas to position new rectangle below previous rectnagle
         canvas5.render_transform = doc.create_matrix(1, 0, 0, 1, 0, 800)
         # Rotate this canvas aroud a point on 45 degrees
-        canvas5.render_transform.rotate_around(45, aspose.pydrawing.PointF(100, 50))
+        canvas5.render_transform.rotate_around(45, aspose.pydrawing.PointF(100., 50.))
         rect = canvas5.add_path(rect_geom)
         rect.fill = fill
         

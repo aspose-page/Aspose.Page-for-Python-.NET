@@ -39,7 +39,7 @@ class AddRadialGradient1PS:
             color_blend.positions = positions
             
             brush_rect = aspose.pydrawing.drawing2d.GraphicsPath()
-            brush_rect.add_rectangle(aspose.pydrawing.RectangleF(0, 0, width, height))
+            brush_rect.add_rectangle(aspose.pydrawing.RectangleF(0., 0., width, height))
             
             #Create path gradient brush with rectangle as a bounds
             brush = GraphicsFactory.create_path_gradient_brush_by_path(brush_rect)

@@ -2,7 +2,6 @@ from aspose.page import *
 from aspose.page.eps import *
 from aspose.page.eps.device import *
 import aspose.pydrawing
-import io
 from util import Util
 
 
@@ -31,7 +30,7 @@ class AddHorizontalGradientPS:
             path.add_rectangle(aspose.pydrawing.RectangleF(offset_x, offset_y, width, height))
             
             #Create linear gradient brush with rectangle as a bounds, start and end colors
-            brush = GraphicsFactory.create_linear_gradient_brush_by_rect_and_angle(aspose.pydrawing.RectangleF(0, 0, width, height),
+            brush = GraphicsFactory.create_linear_gradient_brush_by_rect_and_angle(aspose.pydrawing.RectangleF(0., 0., width, height),
                 aspose.pydrawing.Color.from_argb(150, 0, 0, 0), aspose.pydrawing.Color.from_argb(50, 40, 128, 70), 0)
             #Create a transform for brush. X and Y scale component must be equal to width and height of the rectangle correspondingly.
             #Translation components are offsets of the rectangle

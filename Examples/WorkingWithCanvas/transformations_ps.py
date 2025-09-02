@@ -1,7 +1,6 @@
 from aspose.page.eps import *
 from aspose.page.eps.device import *
 import aspose.pydrawing
-import io
 from util import Util
 
 class TransformationsPS:
@@ -23,7 +22,7 @@ class TransformationsPS:
             
             #Create graphics path from the rectangle
             path = aspose.pydrawing.drawing2d.GraphicsPath()
-            path.add_rectangle(aspose.pydrawing.RectangleF(0, 0, 150, 100))
+            path.add_rectangle(aspose.pydrawing.RectangleF(0., 0., 150., 100.))
             
             ##################################### No transformations ///////////////////////////////////////////////////////////////
             #Set paint in graphics state on upper level

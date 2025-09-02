@@ -1,5 +1,4 @@
 from aspose.page.eps import *
-from aspose.page.eps.device import *
 from aspose.page.eps.xmp import *
 from util import Util
 

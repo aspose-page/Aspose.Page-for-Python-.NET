@@ -15,8 +15,8 @@ class AddTiledImageXPS:
         # Tile image
         # ImageBrush filled rectangle in the right top bellow
         path = doc.add_path(doc.create_path_geometry("M 10,160 L 228,160 228,305 10,305"))
-        imageBrush: XpsImageBrush = doc.create_image_brush(data_dir + "R08LN_NN.jpg", aspose.pydrawing.RectangleF(0, 0, 128, 96),
-            aspose.pydrawing.RectangleF(0, 0, 64, 48))
+        imageBrush: XpsImageBrush = doc.create_image_brush(data_dir + "R08LN_NN.jpg", aspose.pydrawing.RectangleF(0.0, 0.0, 128.0, 96.0),
+            aspose.pydrawing.RectangleF(0.0, 0.0, 64.0, 48.0))
         path.fill = imageBrush
         imageBrush.tile_mode = XpsTileMode.TILE
         path.fill.opacity = 0.5

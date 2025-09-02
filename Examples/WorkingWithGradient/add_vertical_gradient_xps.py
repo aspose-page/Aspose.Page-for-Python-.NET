@@ -21,7 +21,7 @@ class AddVerticalGradientXPS:
         # Create new path by defining geometery in abbreviation form
         path = doc.add_path(doc.create_path_geometry("M 10,110 L 228,110 228,200 10,200"))
         path.render_transform = doc.create_matrix(1, 0, 0, 1, 20, 70)
-        gradient: XpsLinearGradientBrush = doc.create_linear_gradient_brush(aspose.pydrawing.PointF(10, 110), aspose.pydrawing.PointF(10, 200))
+        gradient: XpsLinearGradientBrush = doc.create_linear_gradient_brush(aspose.pydrawing.PointF(10., 110.), aspose.pydrawing.PointF(10., 200.))
         path.fill = gradient
         gradient.gradient_stops.extend(stops)
         # Save resultant XPS document

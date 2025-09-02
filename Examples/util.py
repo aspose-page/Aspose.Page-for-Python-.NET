@@ -62,6 +62,10 @@ class Util:
         return Util.get_data_dir_data() + "WorkingWithEPS/"
 
     @staticmethod
+    def get_data_dir_working_with_fonts():
+        return Util.get_data_dir_data() + "WorkingWithFonts/"
+
+    @staticmethod
     def get_data_dir_working_with_cross_package_operations():
         return Util.get_data_dir_data() + "WorkingWithCrossPackageOperations/"
 

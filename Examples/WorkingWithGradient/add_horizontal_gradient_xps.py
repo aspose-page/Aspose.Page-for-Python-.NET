@@ -23,7 +23,7 @@ class AddHorizontalGradientXPS:
         # Create new path by defining geometery in abbreviation form
         path = doc.add_path(doc.create_path_geometry("M 10,210 L 228,210 228,300 10,300"))
         path.render_transform = doc.create_matrix(1, 0, 0, 1, 20, 70)
-        gradient: XpsLinearGradientBrush = doc.create_linear_gradient_brush(aspose.pydrawing.PointF(10, 0), aspose.pydrawing.PointF(228, 0))
+        gradient: XpsLinearGradientBrush = doc.create_linear_gradient_brush(aspose.pydrawing.PointF(10., 0.), aspose.pydrawing.PointF(228., 0.))
         path.fill = gradient
         gradient.gradient_stops.extend(stops)
         # Save resultant XPS document

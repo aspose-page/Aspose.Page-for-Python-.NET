@@ -2,7 +2,6 @@ from aspose.page import *
 from aspose.page.eps import *
 from aspose.page.eps.device import *
 import aspose.pydrawing
-import io
 from util import Util
 
 class AddHatchPatternPS:
@@ -34,7 +33,7 @@ class AddHatchPatternPS:
             
             #Create rectngle path for every pattern square
             path = aspose.pydrawing.drawing2d.GraphicsPath()
-            path.add_rectangle(aspose.pydrawing.RectangleF(0, 0, square_side, square_side))
+            path.add_rectangle(aspose.pydrawing.RectangleF(0.0, 0.0, square_side, square_side))
             
             #Create pen for outlining pattern square
             pen = GraphicsFactory.create_pen_by_color_and_width(aspose.pydrawing.Color.black, 2)

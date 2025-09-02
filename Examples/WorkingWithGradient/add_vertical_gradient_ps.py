@@ -2,7 +2,6 @@ from aspose.page import *
 from aspose.page.eps import *
 from aspose.page.eps.device import *
 import aspose.pydrawing
-import io
 from util import Util
 
 
@@ -39,7 +38,7 @@ class AddVerticalGradientPS:
             color_blend.positions = positions
             
             #Create linear gradient brush with rectangle as a bounds, start and end colors
-            brush = GraphicsFactory.create_linear_gradient_brush_by_rect_and_angle(aspose.pydrawing.RectangleF(0, 0, width, height),
+            brush = GraphicsFactory.create_linear_gradient_brush_by_rect_and_angle(aspose.pydrawing.RectangleF(0., 0., width, height),
             aspose.pydrawing.Color.beige, aspose.pydrawing.Color.dodger_blue, 0)
             #Set interpolation colors
             brush.interpolation_colors = color_blend

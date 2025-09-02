@@ -59,6 +59,8 @@ from WorkingWithCanvas.transformations_ps import *
 from WorkingWithCanvas.transformations_xps import *
 from WorkingWithEPS.resize_eps import *
 from WorkingWithEPS.crop_eps import *
+from WorkingWithFonts.convert_type1 import *
+from WorkingWithFonts.convert_type3 import *
 from WorkingWithXMPMetadataInEPS.add_metadata import *
 from WorkingWithXMPMetadataInEPS.change_metadata_add_array_items import *
 from WorkingWithXMPMetadataInEPS.change_metadata_add_named_value_item import *
@@ -117,9 +119,9 @@ def main():
     # WorkingWithDocumentMerging
     # =====================================================
     # =====================================================
-    MergePostScriptToPdf.run();
-    MergeXPStoPDF.run();
-    MergeXPStoXPS.run();
+    # MergePostScriptToPdf.run();
+    # MergeXPStoPDF.run();
+    # MergeXPStoXPS.run();
 
     # =====================================================
     # =====================================================
@@ -256,7 +258,15 @@ def main():
     ResizeEPS.run_inches();
     ResizeEPS.run_mms();
     ResizeEPS.run_percents();
-    CropEPS.run()
+    CropEPS.run();
+
+    # =====================================================
+    # =====================================================
+    # Working with fonts
+    # =====================================================
+    # =====================================================
+    ConvertType1Font.run();
+    ConvertType3Font.run();
 
     # =====================================================
     # =====================================================

@@ -1,7 +1,6 @@
 import aspose
 from aspose.page.eps import *
 from aspose.page.eps.device import *
-import io
 from util import Util
 
 class ClippingPS:
@@ -21,7 +20,7 @@ class ClippingPS:
             
             #Create graphics path from the rectangle
             rectange_path = aspose.pydrawing.drawing2d.GraphicsPath()
-            rectange_path.add_rectangle(aspose.pydrawing.RectangleF(0, 0, 300, 200))
+            rectange_path.add_rectangle(aspose.pydrawing.RectangleF(0., 0., 300., 200.))
             
             ##################################### Clipping by shape //////////////////////////////////////////////////////////////////////
             
@@ -33,7 +32,7 @@ class ClippingPS:
             
             #Create graphics path from the circle
             circle_path = aspose.pydrawing.drawing2d.GraphicsPath()
-            circle_path.add_ellipse(aspose.pydrawing.RectangleF(50, 0, 200, 200))
+            circle_path.add_ellipse(aspose.pydrawing.RectangleF(50., 0., 200., 200.))
             
             #Add clipping by circle to the current graphics state
             document.clip(circle_path)
